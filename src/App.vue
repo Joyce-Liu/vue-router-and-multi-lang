@@ -37,7 +37,7 @@ export default {
 		}
 	},
 	mounted(){
-    this.changeLanguage(this.$route.params.lang?this.$route.params.lang:'en');
+    this.changeLanguage(this.$route.params.lang);
 	}
 }
 </script>

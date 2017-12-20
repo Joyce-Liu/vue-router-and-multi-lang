@@ -11,27 +11,6 @@ import LangZhCHT from '../static/lang/zhCHT'
 Vue.config.productionTip = false
 Vue.use(VueI18n)
 
-// const messages = {
-//   en: {
-//     message: {
-//       hello: 'hello',
-//       about: 'about'
-//     }
-//   },
-//   zhCHS: {
-//     message: {
-//       hello: '你好',
-//       about: '关于'
-//     }
-//   },
-//   zhCHT: {
-//     message: {
-//       hello: '妳好',
-//       about: '關於'
-//     }
-//   }
-// }
-
 const i18n = new VueI18n({
   locale: 'en', // 语言标识
   messages:{
