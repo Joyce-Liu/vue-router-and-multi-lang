@@ -4,7 +4,6 @@
     h3 {{ $t("message.hello") }}
     //- router-link(:to="{ name: 'about'}") link to About
     a(@click="goto") link to About
-    p language: {{lang}}
 </template>
 
 <script type="es6">
@@ -15,9 +14,6 @@ export default {
     goto(){
       this.$router.push({name:'about',params: {lang: this.lang}})
     }
-  },
-  mounted(){
-    
   }
 }
 </script>

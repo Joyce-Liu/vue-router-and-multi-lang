@@ -1,7 +1,7 @@
 <template lang="jade">
   #app
     //-header-
-    HeadTop(@changeAppLocale="changeAppLocale")
+    HeadTop(@changeAppLocale="changeAppLocale" v-bind:lang="lang")
     //-main-
     div.main
       router-view(v-bind:lang="lang" )
@@ -17,8 +17,7 @@ export default {
   name: 'app',
   data(){
     return{
-      lang: '',
-      routeName: '',
+      lang: ''
     }
   },
   components:{
@@ -29,11 +28,10 @@ export default {
     changeLanguage(lang){
       this.$i18n.locale=lang;
       this.lang=lang;
-      this.routeName = this.$route.name;
     },
 		changeAppLocale(locale){
       this.changeLanguage(locale);
-      this.$router.push({name: this.routeName, params: {lang: this.lang}})
+      this.$router.push({name: this.$route.name, params: {lang: this.lang}})
 		}
 	},
 	mounted(){

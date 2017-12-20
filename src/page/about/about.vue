@@ -3,13 +3,12 @@
     p About Page
     h3 {{ $t("message.about") }}
     router-link(:to="{name:'home',params: {lang: this.lang}}") link to Home
-    p language: {{lang}}
 </template>
 
 <script type="es6">
   export default {
     name:'about',
-    props: ['lang'],
+    props: ['lang']
   }
 </script>
 
