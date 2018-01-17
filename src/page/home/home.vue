@@ -2,6 +2,7 @@
   div.homepage
     p Home Page
     h3 {{ $t("message.hello") }}
+    p {{welcomeMessage}}
     //- router-link(:to="{ name: 'about'}") link to About
     a(@click="goto") link to About
 </template>
@@ -10,6 +11,16 @@
 export default {
   name: 'home',
   props: ['lang'],
+  data(){
+    return{
+      username: 'Joyce',
+    }
+  },
+  computed:{
+    welcomeMessage(){
+      return this.username + ', '+ this.$t("message.welcome");
+    } 
+  },
   methods:{
     goto(){
       this.$router.push({name:'about',params: {lang: this.lang}})

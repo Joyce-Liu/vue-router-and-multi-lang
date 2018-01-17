@@ -1,6 +1,7 @@
 module.exports={
   message: {
     hello: 'hello',
-    about: 'about'
+    about: 'about',
+    welcome: "Welcome"
   }
 }
