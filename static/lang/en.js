@@ -2,6 +2,8 @@ module.exports={
   message: {
     hello: 'hello',
     about: 'about',
-    welcome: "Welcome"
+    welcome: "welcome",
+    username: 'Visitor',
+    placeholder: "Please input your nickname"
   }
 }

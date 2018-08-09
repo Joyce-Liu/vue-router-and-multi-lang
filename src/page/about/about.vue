@@ -1,7 +1,7 @@
 <template lang="jade">
   div.about 
     p About Page
-    h3 {{ $t("message.about") }}
+    h3.content {{ $t("message.about") }}
     router-link(:to="{name:'home',params: {lang: this.lang}}") link to Home
 </template>
 

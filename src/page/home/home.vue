@@ -1,8 +1,10 @@
 <template lang="jade">
   div.homepage
     p Home Page
-    h3 {{ $t("message.hello") }}
-    p {{welcomeMessage}}
+    div.content
+      h3 {{ $t("message.hello") }}
+      input(v-model="username" v-bind:placeholder="this.$t('message.placeholder')")
+      p {{welcomeMessage}}
     //- router-link(:to="{ name: 'about'}") link to About
     a(@click="goto") link to About
 </template>
@@ -13,12 +15,13 @@ export default {
   props: ['lang'],
   data(){
     return{
-      username: 'Joyce',
+      username: '',
     }
   },
   computed:{
     welcomeMessage(){
-      return this.username + ', '+ this.$t("message.welcome");
+      var username = this.username? this.username : this.$t("message.username");
+      return username + ', '+ this.$t("message.welcome");
     } 
   },
   methods:{
@@ -31,4 +34,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='sass'>
+input
+  border: solid 1px grey;
+  width: 200px;
+  height: 2em;
+  padding-left: 5px;
+  font-size: 13px;
 </style>

@@ -7,7 +7,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: '/cnycard2018/',
+  // base: '/cnycard2018/',
   routes: [
     {
       path: '/:lang',
